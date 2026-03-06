@@ -1,0 +1,135 @@
+/* 全局重置：清除所有元素的默认边距和内边距，设置盒模型为 border-box */
+* { 
+    margin: 0; /* 清除默认外边距 */
+    padding: 0; /* 清除默认内边距 */
+    box-sizing: border-box; /* 盒模型设置为 border-box，使宽度/高度包含边框和内边距 */
+} 
+
+/* 页面主体样式 */
+body { 
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(156, 160, 201); /* 设置背景色为灰色 */
+    padding: 30px; /* 页面内边距为 30px */
+} 
+
+/* 容器样式 */
+.container { 
+    max-width: 80%; /* 最大宽度为 800px */
+    margin: 0 auto; /* 水平居中（上下边距为 0，左右自动） */
+    background: rgb(226, 241, 238); /* 背景色 */
+    padding: 20px; /* 容器内边距为 20px */
+    border-radius: 50px; /* 圆角边框，半径为 8px */
+    box-shadow: 0 2px 10px rgba(81, 75, 75, 0.1); /* 阴影效果：水平偏移 0，垂直偏移 2px，模糊 10px，透明度 0.1 */
+} 
+
+/* 标题样式 */
+h1 { 
+    text-align: center; /* 文本居中 */
+    margin-bottom: 20px; /* 底部外边距为 20px */
+    color: #86067a; /* 文字颜色 */
+} 
+
+/* 输入区域样式 */
+.input-section { 
+    /* 全局重置：清除所有元素的默认边距和内边距，设置盒模型为 border-box */
+    margin: 0; /* 清除默认外边距 */
+    padding: 0; /* 清除默认内边距 */
+    box-sizing: border-box; /* 盒模型设置为 border-box，使宽度/高度包含边框和内边距 */
+    display: flex; /* 使用 flex 布局，使子元素横向排列 */
+    justify-content: center; 
+    margin-bottom: 20px; /* 底部外边距为 20px */
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+/* 输入框样式（ID 选择器） */
+#todo-input { 
+    text-align: center;
+    flex: 1; /* 弹性布局中占据剩余空间 */
+    padding: 10px; /* 内边距为 10px */
+    border: 1px solid #f73f98; /* 边框为 1px 实线，颜色为浅灰色 */
+    border-radius: 50px; /* 圆角边框，半径为 4px */
+    font-size: 16px; /* 字体大小为 16px */
+    outline: none; /* 移除默认焦点轮廓 */
+    -webkit-appearance: none; /* 移除 WebKit 浏览器的默认样式 */
+    appearance: none; /* 移除其他浏览器的默认样式 */
+} 
+
+/* 添加按钮样式 */
+#btn { 
+    text-align: center;
+    padding: 10px 10px; /* 内边距：上下 10px，左右 20px */
+    background: #c388c4; /* 背景色 */
+    color: rgb(247, 243, 247); /* 文字颜色 */
+    border: none; /* 无边框 */
+    border-radius: 10px; /* 圆角边框，半径为 4px */
+    margin-left: 10px; /* 左侧外边距为 10px */
+    cursor: pointer; /* 鼠标悬停时显示指针样式 */
+} 
+
+/* 添加按钮 hover 效果 */
+#btn:hover { 
+    background: #b749bd; /* 鼠标悬停时背景色 */
+} 
+
+/* 任务列表样式 */
+#todo-list { 
+    list-style: none; /* 移除默认列表样式 */
+}
+
+/* 任务项 */
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: rgb(243, 222, 239);
+    border-radius: 50px;
+}
+
+.todo-item:hover {
+    background: #f9f9f9;
+}
+
+/* 删除按钮 */
+.delete-btn {
+    background: #eb554a;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #d32f2f;
+}
+/* 完成按钮 */
+.finish-btn {
+    background: #5296c7;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.finish-btn:hover {
+    background: #4446eb;
+}
+.completed {
+    background-color: white !important; /* 强制背景为白色 */
+}
+
+/* 覆盖完成状态的 hover 效果 */
+.completed:hover {
+    background-color: white !important; /* 即使 hover 也保持白色 */
+}
+
+/* 任务完成状态的文字样式 */
+.completed span {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px; /* 加粗横线 */
+    color: #999; /* 文字变灰 */
+}
