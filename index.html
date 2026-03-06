@@ -1,0 +1,20 @@
+<!DOCTYPE html> <!-- 声明文档类型为 HTML5，告诉浏览器使用 HTML5 标准解析页面 --> 
+<html lang="zh-CN"> <!-- 根元素，lang 属性指定页面语言为简体中文 --> 
+<head> <!-- 头部区域，包含页面的元信息和资源引用 --> 
+    <meta charset="UTF-8"> <!-- 设置字符编码为 UTF-8，确保中文等字符能正确显示 --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式设置，使页面在不同设备上自适应显示 --> 
+    <title>To-do List</title> <!-- 页面标题，显示在浏览器标签栏 --> 
+    <link rel="stylesheet" href="style.css"> <!-- 引入外部 CSS 样式文件 --> 
+</head>
+<body> <!-- 主体区域，包含页面的可见内容 --> 
+    <div class="container"> <!-- 容器 div，用于包裹整个 Todo List 内容 --> 
+        <h1>To-do List</h1> <!-- 页面标题，显示 Todo List 标题 --> 
+        <div class="input-section"> <!-- 输入区域，包含输入框和添加按钮 --> 
+            <input type="text" id="todo-input" placeholder="请输入文本"> <!-- 输入框，用户输入新任务 --> 
+            <button id="btn">添加</button> <!-- 添加按钮，点击后添加新任务 --> 
+        </div> 
+        <ul id="todo-list"></ul> <!-- 任务列表（空的，由 JavaScript 动态添加内容） --> 
+    </div> 
+    <script src="script.js"></script> <!-- 引用 JavaScript 文件 --> 
+</body> 
+</html>
